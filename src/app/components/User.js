@@ -26,7 +26,7 @@ export class User extends React.Component {
               this.state.hobbies.map( (hobby) => 
                 <span key={ hobby.id }>{ hobby.value }{ this.state.hobbies[this.state.hobbies.length-1] === hobby ? null : ", " }</span>)
             }
-            <button className="pull-right" onClick={ this.makeOlder.bind(this) } >Make me older!</button>
+            <button className="pull-right" onClick={ this.makeOlder.bind(this) /* () => this.makeOlder() */ } >Make me older!</button>
           </div>
         </div>
       </div>
