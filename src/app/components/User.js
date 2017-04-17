@@ -4,25 +4,27 @@ export class User extends React.Component {
 
   constructor(props) {
     super();
-    this.user = props.user;
+    this.state = {...props.user}; // destructure user object into state object
   }
 
   makeOlder() {
-    this.user.age += 1;
+    this.setState({
+      age: Number.parseInt(this.state.age) + 1 // age comes with string type
+    });
   }
 
   render() {
     return (
-      <div className="">
+      <div>
         <div className="panel panel-success">
           <div className="panel-body">
-            { this.user.name }
+            { this.state.name }
           </div>
           <div className="panel-footer">
-            { this.user.age } years old.<br/>
+            { this.state.age } years old.<br/>
             Hobbies: { 
-              this.user.hobbies.map( (hobby) => 
-                <span key={ hobby.id }>{ hobby.value }{ this.user.hobbies[this.user.hobbies.length-1] === hobby ? null : ", " }</span>)
+              this.state.hobbies.map( (hobby) => 
+                <span key={ hobby.id }>{ hobby.value }{ this.state.hobbies[this.state.hobbies.length-1] === hobby ? null : ", " }</span>)
             }
             <button className="pull-right" onClick={ this.makeOlder.bind(this) } >Make me older!</button>
           </div>
