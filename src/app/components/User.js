@@ -17,12 +17,20 @@ export class User extends React.Component {
     this.props.changeGreeter(this.state.name); // This triggers parent component's onChangeGreeter method with the params from the child.
   }
 
+  onNameChange(event) {
+    this.setState({
+      name: event.target.value
+    });
+  }
+
   render() {
     return (
       <div>
         <div className="panel panel-success">
           <div className="panel-body">
             { this.state.name }
+            <input className="pull-right" type="text" value={ this.state.name } onChange={ (event) => this.onNameChange(event) }/>
+            <button className="pull-right">Change</button>
           </div>
           <div className="panel-footer">
             { this.state.age } years old.<br/>
