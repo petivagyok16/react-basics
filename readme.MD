@@ -18,3 +18,6 @@
 - Latest node & npm
 - osx
 
+### Github-pages
+`https://petivagyok16.github.io/react-basics/`
+
