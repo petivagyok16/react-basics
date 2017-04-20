@@ -6,8 +6,8 @@
 - `npm start` to run the project
 - on Windows change the current build commands in `package.json` to the following:
 ```
-"build": "webpack -d && xcopy \"src/index.html\" \"dist/index.html\" /F /Y && webpack-dev-server --content-base src/ --inline ",
-"build:prod": "webpack -p && xcopy \"src/index.html\" \"dist/index.html\" /F /Y"
+"build": "webpack -d && xcopy \"docs/index.html\" \"dist/index.html\" /F /Y && webpack-dev-server --content-base docs/ --inline ",
+"build:prod": "webpack -p && xcopy \"docs/index.html\" \"dist/index.html\" /F /Y"
 ```
 
 ### Bundling
