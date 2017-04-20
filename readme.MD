@@ -4,6 +4,11 @@
 
 - `npm install` to install all the packages
 - `npm start` to run the project
+- on Windows change the current build commands in `package.json` to the following:
+```
+"build": "webpack -d && xcopy \"src/index.html\" \"dist/index.html\" /F /Y && webpack-dev-server --content-base src/ --inline ",
+"build:prod": "webpack -p && xcopy \"src/index.html\" \"dist/index.html\" /F /Y"
+```
 
 ### Bundling
 - `npm run build` for a development bundle
@@ -11,5 +16,5 @@
 
 ### Requirements
 - Latest node & npm
-- windows
+- osx
 
