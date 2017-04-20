@@ -2,7 +2,7 @@ var webpack = require("webpack");
 var path = require("path");
 
 var DIST_DIR = path.resolve(__dirname, "dist");
-var SRC_DIR = path.resolve(__dirname, "src");
+var SRC_DIR = path.resolve(__dirname, "docs");
 
 var config = {
   entry: SRC_DIR + "/app/index.js",
