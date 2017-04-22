@@ -29,7 +29,7 @@ export class Home extends React.Component {
             (user) => <User
               key={ user.id }
               user={ user }
-              changeGreeter={this.onChangeGreeter.bind(this)}/> )
+              changeGreeter={ this.onChangeGreeter.bind(this) }/> )
         }
       </div>
     );
