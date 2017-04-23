@@ -39,7 +39,6 @@ export class User extends React.Component {
         <div className="panel-body">
           { this.state.name }
           <input className="pull-right" type="text" value={ this.state.name } onChange={ (event) => this.onNameChange(event) }/>
-          {/*<button className="pull-right">Change</button>*/}
         </div> )
     }
     return (
